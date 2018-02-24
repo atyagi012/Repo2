@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="45201" started-at="2015-06-06T12:39:55Z" finished-at="2015-06-06T12:40:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="45201" started-at="2015-06-06T12:39:55Z" finished-at="2015-06-06T12:40:40Z">
+      <class name="start_June_06.Calander">
+        <test-method status="PASS" signature="atBefore()[pri:0, instance:start_June_06.Calander@2723a510]" name="atBefore" is-config="true" duration-ms="14983" started-at="2015-06-06T18:09:55Z" finished-at="2015-06-06T18:10:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atBefore -->
+        <test-method status="PASS" signature="table()[pri:0, instance:start_June_06.Calander@2723a510]" name="table" duration-ms="30193" started-at="2015-06-06T18:10:10Z" finished-at="2015-06-06T18:10:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- table -->
+        <test-method status="PASS" signature="atAfter()[pri:0, instance:start_June_06.Calander@2723a510]" name="atAfter" is-config="true" duration-ms="1" started-at="2015-06-06T18:10:40Z" finished-at="2015-06-06T18:10:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atAfter -->
+      </class> <!-- start_June_06.Calander -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

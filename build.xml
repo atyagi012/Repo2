@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Filename: build.xml
+  Note: You have to change the followings according to your environment:
+          -<pathelement location="lib/testng/testng-5.14.7.jar"/>
+          -<pathelement location="bin"/>
+-->
+<project basedir="." default="run" name="Sample of Ant file for TestNG">
+
+	<!-- Define <testng> task -->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<pathelement location="lib/testng-6.8.6beta.jar" />
+		</classpath>
+	</taskdef>
+
+	<!-- Directory name where the TestNG report will be saved. -->
+	<property name="testng.output.dir" value="testng_output" />
+	<property name="basedir" value="." />
+	<property name="LIB" value="${basedir}/lib" />
+	<property name="BIN" value="${basedir}/build1" />
+	<path id="master-classpath">
+		<pathelement location="${BIN}" />
+		<fileset dir="${LIB}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Directory path of compiled classes(i.e *.class) -->
+	<path id="classes">
+
+		<pathelement location="lib/selenium-server-standalone-2.43.1.jar" />
+		<pathelement location="lib/saxon-8.7.jar" />
+		<pathelement location="lib/SaxonLiaison.jar" />
+		<pathelement location="build1/classes" />
+	</path>
+
+	<!--
+  Target to run TestNG. It will run according to what are defined in testng.xml.
+  The report will be saved at .../testng_output/index.html.
+  -->
+
+
+	<target name="clean">
+
+		<delete dir="build1" />
+		<delete dir="${basedir}/testng_xslt" />
+		<delete dir="${basedir}/screenShot" />
+		<delete dir="${testng.output.dir}" />
+
+	</target>
+
+ 
+
+	<target name="compile" depends="clean">
+
+		<mkdir dir="build1/classes" />
+		<javac srcdir="src" destdir="build1/classes" includeantruntime="true" classpath="lib/testng-6.8.6beta.jar" debug="${on}" classpathref="classes" />
+	</target>
+
+
+	<target name="run" depends="compile">
+
+		<mkdir dir="${testng.output.dir}" />
+		<!-- Create the output directory. -->
+		<testng outputdir="${testng.output.dir}" classpathref="classes">
+			<xmlfileset dir="." includes="TestNG.xml" />
+		</testng>
+		<xslt in="${testng.output.dir}/testng-results.xml" style="testng-results.xsl" out="${basedir}/testng-xslt/index.html">
+			<param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
+			<param expression="true" name="testNgXslt.sortTestCaseLinks" />
+			<param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+			<param expression="true" name="testNgXslt.showRuntimeTotals" />
+			<classpath refid="master-classpath">
+			</classpath>
+		</xslt>
+	</target>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNG Reports Generation]" parallel="tests">
+  <test name="Test Case 1(failed)" parallel="tests">
+    <classes>
+      <class name="myPack1.TC01">
+        <methods>
+          <include name="atTest"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- myPack1.TC01 -->
+      <class name="myPack1.TC02">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- myPack1.TC02 -->
+    </classes>
+  </test> <!-- Test Case 1(failed) -->
+  <test name="Test Case 2(failed)" parallel="tests">
+    <classes>
+      <class name="myPack1.TC02">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="atTest"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- myPack1.TC02 -->
+      <class name="myPack1.TC01">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- myPack1.TC01 -->
+    </classes>
+  </test> <!-- Test Case 2(failed) -->
+</suite> <!-- Failed suite [TestNG Reports Generation] -->
