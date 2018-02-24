@@ -5,16 +5,16 @@
 
 	<test name="Test Case 1">
 		<classes>
-			<class name="myPack1.TC01" />
+			<class name="start_June_06.Calander" />
 		</classes>
 	</test>
 
-	<test name="Test Case 2">
+	<!-- <test name="Test Case 2">
 
 		<classes>
 			<class name="myPack1.TC02" />
 		</classes>
-	</test>
+	</test> -->
 
 
 </suite>

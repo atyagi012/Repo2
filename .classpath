@@ -4,7 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="D:/Selenium_Files/mysql-connector-java-5.1.26-bin.jar"/>
-	<classpathentry kind="lib" path="D:/Selenium_Files/lib/selenium-server-standalone-2.45.0.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium_Files/Apache POI/poi-3.10-FINAL/poi-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium_Files/Apache POI/poi-3.10-FINAL/poi-examples-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium_Files/Apache POI/poi-3.10-FINAL/poi-excelant-3.10-FINAL-20140208.jar"/>
@@ -17,5 +16,6 @@
 	<classpathentry kind="lib" path="D:/Selenium_Files/Apache POI/poi-3.10-FINAL/lib/commons-codec-1.5.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium_Files/Apache POI/poi-3.10-FINAL/lib/commons-logging-1.1.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium_Files/lib/sikuli-api-1.0.2-standalone.jar"/>
+	<classpathentry kind="lib" path="D:/abc/Backup_Sw_Files_Docs/Selenium_Files/selenium-server-standalone-2.53.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -17,7 +17,7 @@ public class LBC {
 	
 	@AfterMethod
 	public void atAfter(){
-		//driver.quit();
+		driver.quit();
 		
 	}
 

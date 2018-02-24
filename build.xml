@@ -29,7 +29,7 @@
 	<!-- Directory path of compiled classes(i.e *.class) -->
 	<path id="classes">
 
-		<pathelement location="lib/selenium-server-standalone-2.43.1.jar" />
+		<pathelement location="lib/selenium-server-standalone-2.53.1.jar" />
 		<pathelement location="lib/saxon-8.7.jar" />
 		<pathelement location="lib/SaxonLiaison.jar" />
 		<pathelement location="build1/classes" />
